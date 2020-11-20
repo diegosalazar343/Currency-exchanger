@@ -10,7 +10,34 @@
     </div>
     <div class="col-4">
       <form class="money">
-        <
+        <label for="us-currency">Please select the USD currency:</label>
+        <select class="form-control" id="us-currency">
+          <option value="USD">USD</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <label for="world-currency">Please select a World currency:</label>
+        <select class="form-control" id="world-currency">
+          <option value="AUD">Austrialia</option>
+          <option value="CAD">Canada</option>
+          <option value="CHF">Swiss Franc</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">British Pound</option>
+          <option value="JPY">Japanese Yen</option>
+        </select>
+      <div class="col-4">
+        <label for="finance">Enter how much you wish to exchange:</label>
+        <input id="input-amount" class="form-control" type="number">
+      </div>
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn-success" id="submit">Submit</button>
+      </div>
+      <div class="row justify-content-center medium_font">
+        <div id="results">
+
+        </div>
+      </div>
       </form>
     </div>
   </div>
