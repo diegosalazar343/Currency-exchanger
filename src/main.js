@@ -12,9 +12,10 @@ $(document).ready(function () {
     const inputAmount = $("#input-amount").val();
     $("#").html("");
     $("#").val("");
-    let promise = CurrencyService.currencyExchanger();
-    promise.then(function(response) {
-      const body = JSON.parse(response);
+    CurrencyService.getService()
+    .then(function(rateService) {
+      exchange = new CurrencyService(worldCurrency, inputAmount, rateService);
+      $("#results").append(`${exchange.results(worldCurrency, inputAmount)} ${worldCurrency}`);
     });
   })
 });
