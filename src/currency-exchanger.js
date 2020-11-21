@@ -1,4 +1,4 @@
-export class CurrencyObj {
+export class CurrencyObject {
   constructor(worldCurrency, inputAmount, moneyRate) {
     this.USD = moneyRate.conversion.USD,
     this.AUD = moneyRate.conversion.AUD,
@@ -9,12 +9,12 @@ export class CurrencyObj {
     this.JPY = moneyRate.conversion.JPY,
     this.worldCurrency = worldCurrency;
     this.inputAmount = inputAmount;
-    this.outputAmount = this.currencyResults(this.worldCurrency, this.inputAmount)
+    this.outputAmount = this.currencyResults(this.worldCurrency, this.inputAmount);
   }
 
   currencyResults(worldCurrency, inputAmount) {
     let value = this[worldCurrency];
     let results = value*inputAmount;
-    return result;
+    return results;
   }
 }
